@@ -31,6 +31,13 @@ const changeNames = () => {
   name1.textContent = document.querySelector('.new--name1').value;
   closeModal();
 };
+//RULES BUTTON
+const bntRules = document.querySelector('.btn--rules');
+const modalRules = document.querySelector('.modal--rules');
+const closeRules = () => {
+  modalRules.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
 
 //Starting values
 
@@ -136,3 +143,10 @@ document.addEventListener('keydown', function (event) {
     changeNames();
   }
 });
+bntRules.addEventListener('click', function () {
+  modalRules.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+});
+document.addEventListener('keydown', closeRules);
+
+overlay.addEventListener('click', closeRules);
