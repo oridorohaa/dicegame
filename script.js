@@ -114,6 +114,7 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      document.getElementById(`name--${activePlayer}`).textContent = 'Winner!';
     } else {
       switchPlayer();
     }
